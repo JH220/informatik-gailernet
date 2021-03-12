@@ -7,15 +7,23 @@ public class Niederschlagsmenge {
     public static void main(String[] args) {
         Map<String, Integer> monate = new HashMap<>();
 
-        monate.put("april", 12);
-        monate.put("mai", 14);
-        monate.put("juni", 8);
+        monate.put("April", 12);
+        monate.put("Mai", 14);
+        monate.put("Juni", 8);
 
         int summe = 0;
-        for(int i : monate.values()) summe += i;
+        for(int i : monate.values()) {
+            summe += i;
+        }
         double anzahl = monate.size();
-        double durchschnitt = summe/anzahl;
+        double durchschnitt = summe / anzahl;
 
-        System.out.println("Durchschnitt: \t" +durchschnitt);
+        for(int i = 0; i < monate.size(); i++) {
+            String key = (String) monate.keySet().toArray()[i];
+            int value = monate.get(key);
+
+            System.out.println("Niederschlag im " +key+ ":\t" +value);
+        }
+        System.out.println("Durchschnitt: " +durchschnitt);
     }
 }
