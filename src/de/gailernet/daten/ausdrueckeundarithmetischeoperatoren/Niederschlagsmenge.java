@@ -6,7 +6,6 @@ import java.util.Map;
 public class Niederschlagsmenge {
     public static void main(String[] args) {
         Map<String, Integer> monate = new HashMap<>();
-
         monate.put("April", 12);
         monate.put("Mai", 14);
         monate.put("Juni", 8);
@@ -19,10 +18,10 @@ public class Niederschlagsmenge {
         double durchschnitt = summe / anzahl;
 
         for(int i = 0; i < monate.size(); i++) {
-            String key = (String) monate.keySet().toArray()[i];
-            int value = monate.get(key);
+            String k = (String) monate.keySet().toArray()[i];
+            int v = monate.get(k);
 
-            System.out.println("Niederschlag im " +key+ ":\t" +value);
+            System.out.println("Niederschlag im " +k+ ":\t" +v);
         }
         System.out.println("Durchschnitt: " +durchschnitt);
     }

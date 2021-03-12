@@ -1,6 +1,8 @@
 package de.gailernet.daten.inputoutput;
 
+import java.util.HashMap;
 import java.util.InputMismatchException;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Wechselgeld {
@@ -17,14 +19,30 @@ public class Wechselgeld {
             return;
         }
 
+        Map<Integer, String> name = new HashMap<>();
+        Map<Integer, Integer> unit = new HashMap<>();
+
+        name.put(1, "Dollar"); unit.put(1, 100);
+        name.put(2, "Quarter"); unit.put(2, 25);
+        name.put(3, "Dime"); unit.put(3, 10);
+        name.put(4, "Nickel"); unit.put(4, 5);
+        name.put(5, "Cent"); unit.put(5, 1);
+
         int rest = input;
+        String message = "Das Wechselgeld ist ";
 
-        int dollar = rest / 100; rest = rest % 100;
-        int quarter = rest / 25; rest = rest % 25;
-        int dime = rest / 10; rest = rest % 10;
-        int nickel = rest / 5; rest = rest % 5;
-        int cent = rest;
+        for(int i = 1; i <= name.size(); i++) {
+            int einheit = unit.get(i);
 
-        System.out.println("Das Wechselgeld ist " +dollar+ " Dollar, " +quarter+ " Quarter, " +dime+ " Dime, " +nickel+ " Nickel und " +cent+ " Cent.");
+            int value = rest / einheit;
+            rest = rest % einheit;
+
+            String suffix = ", ";
+            if(name.size() == i) suffix = ".";
+            if((name.size() -1) == i) suffix = " und ";
+            message += value + " " + name.get(i) + suffix;
+        }
+
+        System.out.println(message);
     }
 }
