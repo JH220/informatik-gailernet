@@ -22,24 +22,29 @@ public class Wechselgeld {
         Map<Integer, String> name = new HashMap<>();
         Map<Integer, Integer> unit = new HashMap<>();
 
-        name.put(1, "Dollar"); unit.put(1, 100);
-        name.put(2, "Quarter"); unit.put(2, 25);
-        name.put(3, "Dime"); unit.put(3, 10);
-        name.put(4, "Nickel"); unit.put(4, 5);
-        name.put(5, "Cent"); unit.put(5, 1);
+        name.put(1, "Dollar");
+        unit.put(1, 100);
+        name.put(2, "Quarter");
+        unit.put(2, 25);
+        name.put(3, "Dime");
+        unit.put(3, 10);
+        name.put(4, "Nickel");
+        unit.put(4, 5);
+        name.put(5, "Cent");
+        unit.put(5, 1);
 
         int rest = input;
         String message = "Das Wechselgeld ist ";
 
-        for(int i = 1; i <= name.size(); i++) {
+        for (int i = 1; i <= name.size(); i++) {
             int einheit = unit.get(i);
 
             int value = rest / einheit;
             rest = rest % einheit;
 
             String suffix = ", ";
-            if(name.size() == i) suffix = ".";
-            if((name.size() -1) == i) suffix = " und ";
+            if (name.size() == i) suffix = ".";
+            if ((name.size() - 1) == i) suffix = " und ";
             message += value + " " + name.get(i) + suffix;
         }
 

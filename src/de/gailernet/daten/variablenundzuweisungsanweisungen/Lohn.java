@@ -10,8 +10,8 @@ public class Lohn {
         stundenlohn = 10.0;
         steuersatz = 0.10;
 
-        System.out.println("Arbeitszeit: " +arbeitsstunden);
-        System.out.println("Bruttolohn: " +(arbeitsstunden * stundenlohn));
-        System.out.println("Steuerbetrag: " +(arbeitsstunden*stundenlohn*steuersatz));
+        System.out.println("Arbeitszeit: " + arbeitsstunden);
+        System.out.println("Bruttolohn: " + (arbeitsstunden * stundenlohn));
+        System.out.println("Steuerbetrag: " + (arbeitsstunden * stundenlohn * steuersatz));
     }
 }

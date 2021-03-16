@@ -18,7 +18,7 @@ public class KreisFlaeche {
         }
 
         int radius = input;
-        double area = radius*radius * Math.PI;
+        double area = radius * radius * Math.PI;
 
         System.out.println("Der Radius ist: " + radius);
         System.out.println("Die Fläche beträgt: " + area);

@@ -11,18 +11,18 @@ public class Niederschlagsmenge {
         monate.put("Juni", 8);
 
         int summe = 0;
-        for(int i : monate.values()) {
+        for (int i : monate.values()) {
             summe += i;
         }
         double anzahl = monate.size();
         double durchschnitt = summe / anzahl;
 
-        for(int i = 0; i < monate.size(); i++) {
+        for (int i = 0; i < monate.size(); i++) {
             String k = (String) monate.keySet().toArray()[i];
             int v = monate.get(k);
 
-            System.out.println("Niederschlag im " +k+ ":\t" +v);
+            System.out.println("Niederschlag im " + k + ":\t" + v);
         }
-        System.out.println("Durchschnitt: " +durchschnitt);
+        System.out.println("Durchschnitt: " + durchschnitt);
     }
 }

@@ -20,6 +20,6 @@ public class Dollar {
         int dollar = input / 100;
         int cent = input % 100;
 
-        System.out.println("Das ergibt " +dollar+ " Dollar und " +cent+ " Cent.");
+        System.out.println("Das ergibt " + dollar + " Dollar und " + cent + " Cent.");
     }
 }
