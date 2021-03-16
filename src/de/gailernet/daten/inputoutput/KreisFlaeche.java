@@ -13,7 +13,7 @@ public class KreisFlaeche {
             input = scanner.nextInt();
             scanner.close();
         } catch (InputMismatchException exception) {
-            System.out.println("Gebe eine gültige Zahl an!");
+            System.err.println("Gebe eine gültige Zahl an!");
             return;
         }
 
