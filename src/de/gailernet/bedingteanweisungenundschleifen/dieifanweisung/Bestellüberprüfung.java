@@ -5,22 +5,24 @@ import java.util.Scanner;
 
 public class Bestellüberprüfung {
     public static void main(String[] args) {
-        int schrauben = getInt("Schrauben");
-        int muttern = getInt("Muttern");
-        int unterlegscheiben = getInt("Unterlegscheiben");
+        Scanner scanner = new Scanner(System.in);
+        int schrauben = getMaterial(scanner, "Schrauben");
+        int muttern = getMaterial(scanner, "Muttern");
+        int unterlegscheiben = getMaterial(scanner, "Unterlegscheiben");
+        scanner.close();
 
         if (schrauben > muttern) {
             System.out.println("\nKontrollieren Sie Ihre Bestellung!\n");
+        } else {
+            System.out.println("\nDie Bestellung ist okay.\n");
         }
 
-        System.out.println("Gesamtbetrag: " + (schrauben + muttern + unterlegscheiben));
+        System.out.println("Gesamtbetrag: " + ((schrauben * 5) + (muttern * 3) + unterlegscheiben) + " Cent");
     }
 
-    private static int getInt(String name) {
+    private static int getMaterial(Scanner scanner, String name) {
         int input = 0;
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Anzahl der " + name + ": ");
-
         try {
             input = scanner.nextInt();
         } catch (InputMismatchException exception) {
