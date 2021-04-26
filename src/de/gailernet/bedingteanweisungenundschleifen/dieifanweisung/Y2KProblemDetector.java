@@ -21,11 +21,15 @@ public class Y2KProblemDetector {
                 System.out.print("Aktuelles Jahr: ");
                 currentyear = scanner.nextInt();
             } catch (InputMismatchException exception) {
-                currentyear =Integer.valueOf(new SimpleDateFormat("yy").format(new Date()));
+                currentyear = Integer.valueOf(new SimpleDateFormat("yy").format(new Date()));
             }
         } catch (InputMismatchException exception) {
             System.err.println("Bitte gebe eine richtige Zahl ein!");
             return;
+        }
+
+        if(birthyear > currentyear) {
+            currentyear += 100;
         }
 
         System.out.println("Ihr Alter ist: " + (currentyear - birthyear));
