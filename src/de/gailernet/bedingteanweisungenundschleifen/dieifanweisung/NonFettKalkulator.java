@@ -22,6 +22,8 @@ public class NonFettKalkulator {
             System.out.print("Prozent mageres Fleisch Packung B: ");
             int bpercent = scanner.nextInt();
             bpriceperpound = bprice / bpercent;
+
+            scanner.close();
         } catch (InputMismatchException exception) {
             System.err.println("Bitte gebe eine richtige Zahl ein!");
             return;
@@ -32,6 +34,6 @@ public class NonFettKalkulator {
 
         if(apriceperpound < bpriceperpound) System.out.println("Packung A ist preiswerter.");
         else if (apriceperpound > bpriceperpound) System.out.println("Packung B ist preiswerter.");
-        else System.out.println("Beide Packungen sind gleich preiswert.");
+        else System.out.println("Beide Packungen sind gleich wert.");
     }
 }

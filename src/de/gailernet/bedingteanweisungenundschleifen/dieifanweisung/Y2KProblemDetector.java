@@ -1,7 +1,5 @@
 package de.gailernet.bedingteanweisungenundschleifen.dieifanweisung;
 
-import jdk.internal.util.xml.impl.Input;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.InputMismatchException;
@@ -23,6 +21,8 @@ public class Y2KProblemDetector {
             } catch (InputMismatchException exception) {
                 currentyear = Integer.valueOf(new SimpleDateFormat("yy").format(new Date()));
             }
+
+            scanner.close();
         } catch (InputMismatchException exception) {
             System.err.println("Bitte gebe eine richtige Zahl ein!");
             return;
