@@ -11,7 +11,7 @@ public class AufgabeEins {
         int end = scanner.nextInt();
         scanner.close();
 
-        for(int count = start; count <= end; count++) {
+        for (int count = start; count <= end; count++) {
             System.out.println(count);
         }
     }

@@ -15,11 +15,11 @@ public class ReifendruckDrei {
         boolean okay = true;
 
         int front = frontRight - frontLeft;
-        if(front > 3 || front < -3) okay = false;
+        if (front > 3 || front < -3) okay = false;
         int back = backRight - backLeft;
-        if(back > 3 || back < -3) okay = false;
+        if (back > 3 || back < -3) okay = false;
 
-        if(okay) System.out.println("\nDer Reifendruck ist OK.");
+        if (okay) System.out.println("\nDer Reifendruck ist OK.");
         else System.out.println("\nDer Reifendruck ist nicht in Ordnung!");
     }
 

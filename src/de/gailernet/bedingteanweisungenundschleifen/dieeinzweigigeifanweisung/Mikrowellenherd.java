@@ -14,10 +14,10 @@ public class Mikrowellenherd {
             System.out.print("Anzahl der Posten: ");
             amount = scanner.nextInt();
 
-            if(amount < 1) {
+            if (amount < 1) {
                 System.err.println("Bitte gebe mindestens einen Posten an!");
                 return;
-            } else if(amount > 3) {
+            } else if (amount > 3) {
                 System.err.println("Es wird nicht empfohlen mehr als drei Posten zu erhitzen!");
                 return;
             }
@@ -32,8 +32,8 @@ public class Mikrowellenherd {
         }
 
         int suggestedHeatingTime = heatingTime;
-        if(amount == 2) suggestedHeatingTime = (int) (heatingTime * 1.5);
-        else if(amount == 3) suggestedHeatingTime = heatingTime * 2;
+        if (amount == 2) suggestedHeatingTime = (int) (heatingTime * 1.5);
+        else if (amount == 3) suggestedHeatingTime = heatingTime * 2;
 
         System.out.println("\nEmpfohlende Erhitzungszeit: " + suggestedHeatingTime);
     }

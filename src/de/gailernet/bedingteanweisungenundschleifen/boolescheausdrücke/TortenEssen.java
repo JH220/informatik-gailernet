@@ -19,7 +19,7 @@ public class TortenEssen {
             return;
         }
 
-        if(weight >= 235 && weight <= 265) {
+        if (weight >= 235 && weight <= 265) {
             System.out.println("Herzlichen Glückwunsch, sie sind zum Wettbewerb zugelassen.");
         } else {
             System.out.println("Sie wurden leider nicht zum Wettbewerb zugelassen.");

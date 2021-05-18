@@ -28,7 +28,7 @@ public class Y2KProblemDetector {
             return;
         }
 
-        if(birthyear > currentyear) {
+        if (birthyear > currentyear) {
             currentyear += 100;
         }
 

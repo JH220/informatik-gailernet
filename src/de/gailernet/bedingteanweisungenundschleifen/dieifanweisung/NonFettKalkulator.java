@@ -32,7 +32,7 @@ public class NonFettKalkulator {
         System.out.println("Packung A kostet pro Pfund mageres Fleisch: " + (apriceperpound * 100));
         System.out.println("Packung B kostet pro Pfund mageres Fleisch: " + (bpriceperpound * 100));
 
-        if(apriceperpound < bpriceperpound) System.out.println("Packung A ist preiswerter.");
+        if (apriceperpound < bpriceperpound) System.out.println("Packung A ist preiswerter.");
         else if (apriceperpound > bpriceperpound) System.out.println("Packung B ist preiswerter.");
         else System.out.println("Beide Packungen sind gleich wert.");
     }

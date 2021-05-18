@@ -9,7 +9,7 @@ public class AufgabeZwei {
         String input = scanner.nextLine();
         scanner.close();
 
-        for(int count = input.length(); count > 0; count--) {
+        for (int count = input.length(); count > 0; count--) {
             System.out.println(input);
         }
     }

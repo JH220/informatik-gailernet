@@ -23,7 +23,7 @@ public class Scheckgebuehr {
             return;
         }
 
-        if(giro > 1000 || deposit > 1500) {
+        if (giro > 1000 || deposit > 1500) {
             System.out.println("Es ist keine Checkgebühr fällig.");
         } else {
             System.out.println("Es ist eine Checkgebühr von '0.15$' fällig.");

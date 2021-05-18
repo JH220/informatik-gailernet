@@ -39,7 +39,7 @@ public class FantasySpiel {
         scanner.close();
 
         int totalPoints = strength + health + luck;
-        if(totalPoints > 15) {
+        if (totalPoints > 15) {
             System.out.println("\nSie haben Ihrer Spielfigur zu viele Punkte gegeben!");
 
             strength = 5;

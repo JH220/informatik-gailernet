@@ -13,10 +13,10 @@ public class ReifendruckZwei {
         scanner.close();
 
         boolean okay = true;
-        if(frontRight != frontLeft) okay = false;
-        if(backRight != backLeft) okay = false;
+        if (frontRight != frontLeft) okay = false;
+        if (backRight != backLeft) okay = false;
 
-        if(okay) System.out.println("\nDer Reifendruck ist OK.");
+        if (okay) System.out.println("\nDer Reifendruck ist OK.");
         else System.out.println("\nDer Reifendruck ist nicht in Ordnung!");
     }
 
@@ -24,7 +24,7 @@ public class ReifendruckZwei {
         try {
             System.out.print("Reifendruck des " + name + ": ");
             int i = scanner.nextInt();
-            if(i < 35 || i > 45) System.out.println("Warnung: Der Reifendruck ist außerhalb des erlaubten Bereiches!");
+            if (i < 35 || i > 45) System.out.println("Warnung: Der Reifendruck ist außerhalb des erlaubten Bereiches!");
             return i;
         } catch (InputMismatchException exception) {
             System.err.println("Bitte gebe eine gültige Zahl an!");

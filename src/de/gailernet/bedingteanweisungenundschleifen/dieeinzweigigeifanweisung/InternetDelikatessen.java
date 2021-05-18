@@ -28,9 +28,9 @@ public class InternetDelikatessen {
         }
 
         double shippingPrice;
-        if(price < 10) shippingPrice = 2;
+        if (price < 10) shippingPrice = 2;
         else shippingPrice = 3;
-        if(express) shippingPrice += 5;
+        if (express) shippingPrice += 5;
 
         System.out.println("\nRechnung");
         System.out.println("\t" + name + ": " + price);

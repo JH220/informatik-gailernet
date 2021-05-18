@@ -13,10 +13,10 @@ public class Reifendruck {
         scanner.close();
 
         boolean okay = true;
-        if(frontRight != frontLeft) okay = false;
-        if(backRight != backLeft) okay = false;
+        if (frontRight != frontLeft) okay = false;
+        if (backRight != backLeft) okay = false;
 
-        if(okay) System.out.println("\nDer Reifendruck ist OK.");
+        if (okay) System.out.println("\nDer Reifendruck ist OK.");
         else System.out.println("\nDer Reifendruck ist nicht in Ordnung!");
     }
 
