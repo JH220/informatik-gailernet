@@ -12,7 +12,8 @@ public class AufgabeDrei {
         scanner.close();
 
         StringBuilder builder = new StringBuilder(first);
-        for (int i = 30; i > 0; i--) builder.append(".");
+        int length = first.length() + second.length();
+        for (int i = length; i > 0; i--) builder.append(".");
         builder.append(second);
         System.out.println(builder);
     }
